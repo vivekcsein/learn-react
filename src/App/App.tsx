@@ -1,23 +1,20 @@
-// import Hooks_useState from "../Hooks/Hooks_useState";
-// import { Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import AppLayout from "./AppLayout";
 import AppRouter from "./AppRouter";
-import Line from "./Line";
+import { AuthProvider } from "../components/providers/AuthProvider";
 
-function App() {
+const App = () => {
   return (
     <>
-      <h1 className=" text-textLight text-center pb-4 bg-black">
-        Hello React by <span className="text-textDark text-8xl">vivekcse</span>
-      </h1>
-      <Line />
-      <div className=" min-h-[72vh] m-5 ">
-        <AppRouter />
-      </div>
-      <div className="w-full">
-        <h3 className="text-center">learn reactjs by vivekcse</h3>
-      </div>
+      <BrowserRouter>
+        <AuthProvider>
+          <AppLayout>
+            <AppRouter />
+          </AppLayout>
+        </AuthProvider>
+      </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;

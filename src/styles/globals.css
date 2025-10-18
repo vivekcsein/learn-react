@@ -1,0 +1,186 @@
+/* 🧵 Tailwind Layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400&family=Open+Sans:wght@300;400&family=Poppins:wght@200;400;600&family=Roboto:wght@400;500&family=Work+Sans:ital,wght@0,300;1,400&display=swap'); */
+
+/* 🎨 Theme Variables */
+:root {
+  --dark_mode: #1a1a1a;
+  --night_mode: #212142;
+  --dark_night: #213547;
+  --light_mode: #cccccc;
+  --shadow: #00000033;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000;
+    --foreground: #fff;
+    --primary: #6600ff;
+    --secondary: #4444ff;
+    --accent: #4466ff;
+    --shadow: #6600ff99;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #fff;
+    --foreground: #000;
+    --primary: #ff3333;
+    --secondary: #ff1111;
+    --accent: #ff5555;
+    --shadow: #ff442299;
+  }
+}
+
+/* 🌐 Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "Poppins", "Roboto", "Catamaran", "Verdana", "Open Sans", "Work Sans", "Segoe UI", Geneva,
+    Tahoma, sans-serif;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--night_mode);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+}
+
+/* 📦 Layout Utilities */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📌 Sticky Header */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #eee;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* 🔘 Modern Button */
+.app-button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.app-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+/* 📝 Stylish Input */
+.app-input {
+  width: 250px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.app-input:focus {
+  background-color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--shadow);
+  outline: none;
+}
+
+/* 🧭 Breadcrumbs */
+.breadcrumbs {
+  width: fit-content;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: var(--accent) !important;
+  padding: 10px 40px;
+}
+
+.breadcrumbs a {
+  color: var(--accent) !important;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--secondary);
+}
+
+.breadcrumbs a:focus,
+.breadcrumbs a:visited,
+.breadcrumbs a:active {
+  color: var(--accent) !important;
+}
+
+/* ❌ Cancel Button */
+.cancel_btn {
+  cursor: pointer;
+}
+
+/* 🎆 Animated Background */
+.bg_awesome {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    -45deg,
+    var(--primary),
+    var(--secondary),
+    var(--primary),
+    var(--secondary)
+  );
+  background-size: 400% 400%;
+  animation: bg_awesome 20s ease infinite;
+  height: 100vh;
+}
+
+@keyframes bg_awesome {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 📏 Gradient Line */
+.Line {
+  width: 100%;
+  height: 4px;
+  background-image: linear-gradient(-45deg, var(--primary), var(--secondary));
+  animation: bg_awesome 20s ease infinite;
+}
+
+/* 🧑‍🎨 Text Accent (formerly .name) */
+.text-accent {
+  color: var(--accent);
+}
