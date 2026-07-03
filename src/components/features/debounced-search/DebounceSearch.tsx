@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Input from "../../ui/Input";
 import useDebounce from "../../hooks/useDebounce";
 import useHttpRequest from "../../hooks/useHttpRequest";
-import { apiURL } from "../../../libs/configs/config.app";
+import { apiURL } from "../../../packages/configs/config.app";
 import { HeadingText, ParaText } from "../../ui/StyledUI";
 
 type ResponseType = { id: number; name: string; age: number };

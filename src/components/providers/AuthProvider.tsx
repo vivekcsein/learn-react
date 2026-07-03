@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 
 // ----------------------
 // Dummy User (for demo)
@@ -35,6 +35,7 @@ export interface AuthContextType {
 // Context Initialization
 // ----------------------
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext<AuthContextType | null>(null);
 
 // ----------------------
@@ -97,10 +98,11 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 // Custom Hook (Optional)
 // ----------------------
 
-// export const useSession = (): AuthContextType => {
-//   const context = useContext(AuthContext);
-//   if (!context) {
-//     throw new Error("useAuth must be used within an AuthProvider");
-//   }
-//   return context;
-// };
+// eslint-disable-next-line react-refresh/only-export-components
+export const useSession = (): AuthContextType => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+  return context;
+};

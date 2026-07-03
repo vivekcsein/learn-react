@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
-import AppLayout from "./AppLayout";
 import AppRouter from "./AppRouter";
+import AppLayout from "../components/layouts/AppLayout";
 import { AuthProvider } from "../components/providers/AuthProvider";
 
 const App = () => {

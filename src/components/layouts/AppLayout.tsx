@@ -1,6 +1,6 @@
-import Line from "../components/ui/Line";
-import Header from "../components/layouts/Header";
-import BreadCrumbsSection from "../components/pages/BreadCrumbsSection";
+import Line from "../ui/Line";
+import Header from "./Header";
+import BreadCrumbsSection from "../pages/BreadCrumbsSection";
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   return (

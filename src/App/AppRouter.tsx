@@ -1,15 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import HomePage from "../components/pages/HomePage";
-
-import NotFound from "./NotFound";
+import NotFound from "../components/layouts/NotFound";
 import FormPage from "../components/pages/FormPage";
 import TodoPage from "../components/pages/TodoPage";
 import CounterApp from "../components/pages/CounterApp";
 import Signup from "../components/features/auth-forms/Signup";
 import Signin from "../components/features/auth-forms/Signin";
 import CustomHookPage from "../components/pages/CustomHookPage";
-import DebouncedSearchPage from "../components/pages/DebouncedSearchPage";
 import BreadCrumbsSection from "../components/pages/BreadCrumbsSection";
+import DebouncedSearchPage from "../components/pages/DebouncedSearchPage";
 
 const AppRouter = () => {
   return (

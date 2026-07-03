@@ -1,5 +1,5 @@
-import Button from "../../ui/Button";
-import { apiURL } from "../../../libs/configs/config.app.ts";
+import Button from "../../ui/Button.tsx";
+import { apiURL } from "../../../packages/configs/config.app.ts";
 import useHttpRequest from "../../hooks/useHttpRequest.tsx";
 import {
   VerticalItemGroup,
@@ -8,7 +8,7 @@ import {
   CenteredFlexContainer,
   HeadingText,
   VerticalListGroup,
-} from "../../ui/StyledUI";
+} from "../../ui/StyledUI.tsx";
 
 type ResponseType = { id: number; name: string; age: number };
 type ErrorType = { message: string };

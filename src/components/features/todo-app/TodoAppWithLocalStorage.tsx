@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback } from "react";
 import Input from "../../ui/Input";
 import Button from "../../ui/Button";
-import { setLocalStorageItem, getLocalStorageItem } from "../../../libs/utils/utils.storage";
+import { setLocalStorageItem, getLocalStorageItem } from "../../../packages/utils/utils.storage";
 
 import {
   HorizontalItemGroup,

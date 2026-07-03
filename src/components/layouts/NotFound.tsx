@@ -1,8 +1,4 @@
-import {
-  CenteredFlexContainer,
-  VerticalListGroup,
-  VerticalListItems,
-} from "../components/ui/StyledUI";
+import { CenteredFlexContainer, VerticalListGroup, VerticalListItems } from "../ui/StyledUI";
 
 const NotFound = () => {
   return (
